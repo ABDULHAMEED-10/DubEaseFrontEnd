@@ -5,6 +5,7 @@ import background from '../../../assets/background-1.webp';
 import CloseIcon from '../../../assets/close-icon.png';
 import hamburger from '../../../assets/ham-icon.png';
 import '../Navbar/Navbar.css';
+import { Link } from 'react-router-dom';
 
 const NavHamburger = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -39,9 +40,9 @@ const NavHamburger = () => {
                   </span>
                   {toolsOpen && (
                     <div className="tools-items">
-                      <span>Text to Speech</span>
-                      <span>Voice Cloning</span>
-                      <span>Dubbing</span>
+                      <Link to="/"><span>Text to Speech</span></Link>
+                      <Link to='/'><span>Voice Cloning</span></Link>
+                      <Link to='/StartVideoDubbing'><span>Dubbing</span></Link>
                     </div>
                   )}
                 </div>
