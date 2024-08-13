@@ -1,0 +1,415 @@
+
+.container1{
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e3dbf2;
+    
+}   
+
+.toogleContainer{
+    width: 80vw;
+    max-height: 90vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #9f40ec;  */
+    background-color: #463690;
+    border: none;
+    border-radius: 30px;
+    margin-top: 9%;
+    margin-bottom: 2%;
+    
+    
+}
+
+
+.mainVideoBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    height: 75vh ;
+}
+.mainVideoBox > .videoBox,
+.mainVideoBox > .AudioBox{
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+    flex-wrap: wrap;
+}
+
+.orignalVideoBox,
+.dubbedVideoBox{
+    border: none;
+    background-color:#e3dbf2;
+    width: 33vw;
+    height: 40.5vh;
+    border-radius: 10px;
+    
+    
+}
+.orignalAudioBox,
+.dubbedAudioBox{
+    width: 33vw;
+    height: 10vh;
+    padding: 0.5vmax;
+    border: none;
+    background-color: #e3dbf2;
+    border-radius: 10px;
+
+}
+video {
+    width: 100%; /* Make the video element fill its container */
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+audio{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+.startButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5vmax;
+    margin-bottom: 1vmax;
+}
+
+.mainUploadRecordVideoAudio{
+    display: flex;
+    padding:0.2vmax;
+    width: 90%;
+    box-sizing: border-box;
+    flex-direction: column;
+
+}
+.uploadVideo,
+.recordAudio{
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: space-around;
+    
+   
+}
+.recordAudioButton{
+    margin-top: 1vmax;
+    
+}   
+
+.recordVideo{
+    margin-top: 1vmax;
+    display: flex;
+    gap: 1vmax;
+    align-items: center;
+   
+}
+.videoFileName,
+.audioFileName{
+    color: white   
+}
+
+.recordVideo > button,
+.del_icon {
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border:none;
+    box-shadow: 0 2px 5px #bebebe;
+    box-sizing: border-box;
+    color: black;
+    transition: background-color 0.5s ease;
+
+}
+
+
+.browseVideo > label,
+.browseAudio > label{
+    text-align: center;
+    cursor: pointer;
+    height: 5vh;
+    border: none;
+    font: 400 1vmax cursive;
+    padding: 0 1vmax;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.browseVideo,
+.browseAudio{
+    display: flex;
+    flex-direction: row;
+    font: 400 1.1vmax cursive;
+}
+
+.browseAudio >label:hover,
+.browseVideo >label:hover{
+    background-color: rgb(32, 32, 32);
+    color: white;
+
+}
+
+
+.startButton > input,
+.onVoiceIcons > button{
+    text-align: center;
+    cursor: pointer;
+    height: 6vh;
+    border: none;
+    font: 400 1.4vmax cursive;
+    padding: 0 1vmax;
+    color: black;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    
+    
+}
+
+.startButton > input:hover{
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+.onCameraIcons>button{
+    position: relative;
+    background-color: gray;
+    color: black; 
+    border-radius: 100px;
+    margin: 1vmax;
+    text-align: center;
+    cursor: pointer;
+    height: 3vw;
+    width: 3vw;
+    border: none;
+    font: 400 1vmax cursive;
+    transition: background-color 0.3s ease;
+}
+.onCameraIcons>button:hover,
+.onVoiceIcons>button:hover{
+    background-color: white;
+    color: rgb(158, 48, 48);  
+    opacity: 1;
+}
+
+.startCapture{
+    position: relative;
+}
+
+
+.camera{
+    position: absolute;
+    
+    
+  }
+.mainCamera{
+    position: absolute;
+    display:flex;
+    flex-direction:column-reverse;
+    bottom: 19%;
+
+    
+    
+}
+
+.onVoiceIcons{
+    position: relative;
+    width: 80vh;
+    display: flex;
+    margin-bottom: 1vmax;
+    justify-content: center;
+    align-items: center;
+}
+.onCameraIcons{
+    position: relative;
+    width: 80vh;
+    display: flex;
+    margin-bottom: 1vmax;
+    justify-content: center;
+    align-items: center;
+}
+.Audio_Video_toggle {
+    display: flex;
+    height: 3vmax;
+   
+  }
+  .Audio_Video_toggle > p {
+    margin-top: 1vmax;
+    font: 300 1.5vmax cursive;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    color: white;
+
+  }
+  .toogleContainer > div > .shifter {
+    background-color: white;
+    height: 5px;
+    width: 100%;
+    border: none;
+    
+  }
+.language-selection-main{
+
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1vmax;
+
+}
+.language-selection-main > label{
+    font: 400 1.2vmax cursive;    
+  }
+  .language-selection-main > select,
+  .language-selection-main > select > option
+  {
+    font: 400 1vmax cursive;
+    padding: 0.5vmax;
+    border-radius: 10px;
+
+  }
+
+  
+.startButton{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .startButton > input{
+    width: 50%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    font: 400 3vmax cursive;
+     
+  }
+  .startButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4vmax;
+  }
+  .startButton > input:hover{
+    background-color: var(--button-color);
+}
+  .language-selection-main > label{
+    font: 400 2.4vmax cursive;    
+  }
+  .language-selection-main > select{
+    font: 400 2.4vmax cursive;
+  }
+  .language-selection-main > select > option{
+    font: 400 1.9vmax cursive;
+
+  }
+  .mainUploadRecordVideoAudio{
+    width: 100%;
+    gap: 1vmax;
+  }
+  .mainVideoBox > .videoBox, .mainVideoBox > .AudioBox {
+    width: 100%;
+    padding: 0.5vmax;
+    gap: 0.5vmax;
+   
+  }
+  .mainVideoBox{
+    align-items: start;
+    
+  }
+   
+
+  
+  .orignalVideoBox, .dubbedVideoBox,.orignalAudioBox, .dubbedAudioBox {
+    width: 49%;
+    
+
+  }
+  .browseVideo ,.browseAudio{
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+  }
+
+  .videoFileName,.audioFileName{
+    
+    font: 400 2vmax cursive;
+  
+  }
+  .browseVideo > label, .browseAudio > label {
+    height: 11vw;
+    font: 400 2.5vmax cursive;
+  }
+  .Audio_Video_toggle > p {
+    font: 300 2.3vmax cursive;
+  }
+  .del_icon {
+    width: 50px;
+    height: 42px;   
+    margin: 0 2vmax;
+}
+.orignalAudioBox, .dubbedAudioBox {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    height: 7.5vh;
+}
+.uploadVideo, .recordAudio  {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+.uploadVideo{
+    gap: 3.5vmax;
+}
+.mainCamera{
+    width: 100%;
+   
+}
+
+.onCameraIcons{
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 2vmax;
+
+}
+.toogleContainer{
+    width: 100vw;
+    max-height: 95vh;
+    border-radius:0px;
+    margin-top: 15vh;
+    margin-bottom:0% ;
+    
+}
+.onCameraIcons>button{
+    opacity: 1;
+    height: 8vw;
+    width: 8vw;
+    font: 400 2vmax cursive;
+}
+
+
+}
