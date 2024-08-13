@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../CSS/Profile.css";
 
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCardImage, MDBTypography, MDBIcon } from 'mdb-react-ui-kit';
-import { Tooltip } from "@material-ui/core";
+import { Tooltip } from "@mui/material";
 import Navbar from "../Home/components/Navbar/Navbar";
 const Profile = () => {
   let { user, loading, isAuthenticated } = useSelector((state) => state.user);

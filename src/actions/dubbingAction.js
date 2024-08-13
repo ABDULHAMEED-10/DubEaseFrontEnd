@@ -20,7 +20,7 @@ export const generate_Dub = (source) => async (dispatch) => {
       responseType: 'blob'
   };
     const response = await axios.post(
-      'http://localhost:5000/flask/generateDub',
+      'https://dubnodeapi.up.railway.app/flask/generateDub',
       source,
       config,
       

@@ -39,7 +39,7 @@ import {
       };
   
       const { data } = await axios.post(
-        `http://localhost:4000/api/v1/login`,
+        `https://dubnodeapi.up.railway.app/api/v1/login`,
         { email, password },
         
         config
@@ -61,7 +61,7 @@ import {
   
       const config = { headers: { "Content-Type": "multipart/form-data"} ,withCredentials: true};
      
-      const { data } = await axios.post(`http://localhost:4000/api/v1/register`, userData, config);
+      const { data } = await axios.post(`https://dubnodeapi.up.railway.app/api/v1/register`, userData, config);
       
       dispatch({ type: REGISTER_USER_SUCCESS,payload: { user: data.user, token: data.token } });
     } catch (error) {
@@ -80,7 +80,7 @@ export const loadUser = () => async (dispatch) => {
     try {
       dispatch({ type: LOAD_USER_REQUEST });
   
-      const { data } = await axios.get(`http://localhost:4000/api/v1/me`,{ withCredentials: true});
+      const { data } = await axios.get(`https://dubnodeapi.up.railway.app/api/v1/me`,{ withCredentials: true});
   
       dispatch({ type: LOAD_USER_SUCCESS, payload: { user: data.user, token: data.token } });
     } catch (error) {
@@ -91,7 +91,7 @@ export const loadUser = () => async (dispatch) => {
   // Logout User
   export const logout = () => async (dispatch) => {
     try {
-      await axios.get(`http://localhost:4000/api/v1/logout`,{ withCredentials: true});
+      await axios.get(`https://dubnodeapi.up.railway.app/api/v1/logout`,{ withCredentials: true});
   
       dispatch({ type: LOGOUT_SUCCESS });
     } catch (error) {
@@ -101,7 +101,7 @@ export const loadUser = () => async (dispatch) => {
 //delte user Account
 export const deleteUser = () => async (dispatch) => {
     try {
-      await axios.delete(`http://localhost:4000/api/v1/delete`,{ withCredentials: true});
+      await axios.delete(`https://dubnodeapi.up.railway.app/api/v1/delete`,{ withCredentials: true});
   
       dispatch({ type: LOGOUT_SUCCESS });
     } catch (error) {
@@ -117,7 +117,7 @@ export const deleteUser = () => async (dispatch) => {
       const config = { headers: { "Content-Type": "multipart/form-data" } ,withCredentials: true};
       
   
-      const { data } = await axios.put(`http://localhost:4000/api/v1/me/update`, userData, config);
+      const { data } = await axios.put(`https://dubnodeapi.up.railway.app/api/v1/me/update`, userData, config);
   
       dispatch({ type: UPDATE_PROFILE_SUCCESS, payload: data.success });
     } catch (error) {
@@ -137,7 +137,7 @@ export const deleteUser = () => async (dispatch) => {
       const config = { headers: { "Content-Type": "multipart/form-data" } ,withCredentials: true };
      
       const { data } = await axios.put(
-        `http://localhost:4000/api/v1/password/update`,
+        `https://dubnodeapi.up.railway.app/api/v1/password/update`,
         userData,
         config
       );
@@ -159,7 +159,7 @@ export const deleteUser = () => async (dispatch) => {
       
       const config = { headers: { "Content-Type": "application/json" } ,withCredentials: true };
   
-      const { data } = await axios.post("http://localhost:4000/api/v1/password/forget", email, config);
+      const { data } = await axios.post("https://dubnodeapi.up.railway.app/api/v1/password/forget", email, config);
   
       dispatch({ type: FORGOT_PASSWORD_SUCCESS, payload: data.message });
     } catch (error) {
@@ -177,7 +177,7 @@ export const deleteUser = () => async (dispatch) => {
       const config = { headers: { "Content-Type": "application/json" } ,withCredentials: true };
       
       const { data } = await axios.put(
-        `http://localhost:4000/api/v1/password/reset/${token}`,
+        `https://dubnodeapi.up.railway.app/api/v1/password/reset/${token}`,
         { token,password, confirmedPassword },
         config
       );
