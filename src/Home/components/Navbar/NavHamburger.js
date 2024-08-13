@@ -29,8 +29,8 @@ const NavHamburger = () => {
                 <img src={CloseIcon} alt="close" />
               </div>
               <div className="ham-list">
-                <div className="ham__list-item">Home</div>
-                <div className="ham__list-item">About</div>
+                <Link to="/"><div className="ham__list-item">Home</div></Link>
+                <Link to='/about'><div className="ham__list-item">About</div></Link>
                 <div
                   className="ham__list-item"
                   onClick={() => setToolsOpen(true)}
