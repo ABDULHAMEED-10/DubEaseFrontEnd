@@ -48,10 +48,10 @@ const NavHamburger = () => {
                 </div>
               </div>
               <div className="ham-btn">
-                <div className="try__btn--reverse">
-                  <span>Try DubEase Free </span>
+                <Link to="/login" className="try__btn--reverse">
+                  <span>Login/Signup </span>
                   <img src={ArrowRight} alt="" />
-                </div>
+                </Link>
               </div>
             </div>
           </div>
