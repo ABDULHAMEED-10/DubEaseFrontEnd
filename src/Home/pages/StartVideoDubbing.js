@@ -427,7 +427,8 @@ const StartVideoRecordUpload = () => {
                   value="Generate"
                   id="inputButton"
                   form="myForm"
-                  type="submit"
+                    type="submit"
+                    disabled
                 />
               </div>
             </div>
