@@ -424,7 +424,7 @@ const StartVideoRecordUpload = () => {
                   </select>
                 </div>
                 <input
-                  value="Generate"
+                  value="Wait"
                   id="inputButton"
                   form="myForm"
                     type="submit"
