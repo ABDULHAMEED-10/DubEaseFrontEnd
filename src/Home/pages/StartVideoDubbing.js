@@ -424,11 +424,11 @@ const StartVideoRecordUpload = () => {
                   </select>
                 </div>
                 <input
-                  value="Wait"
+                  value="Generate"
                   id="inputButton"
                   form="myForm"
                     type="submit"
-                    disabled
+                
                 />
               </div>
             </div>
